@@ -133,25 +133,3 @@ INNER JOIN sys.schemas AS sc ON sc.schema_id = o.schema_id
 WHERE o.is_ms_shipped = 0
 ORDER BY o.modify_date DESC, sc.name, o.name;
 GO
-
--- 10. PLANTILLA DE CONTROL DDL Y GIT
--- No ejecutar como cambio real sin revisar y adaptar el objeto.
--- Guardar cada cambio aprobado en un archivo .sql separado y versionarlo en Git.
--- Ejemplo de nombre: DDL_2026-10-12_descripcion_cambio.sql
---
--- Antes del cambio:
---   1. Revisar dependencias y permisos.
---   2. Guardar el script actual en Git.
---   3. Probar en una base de pruebas.
---   4. Registrar motivo, responsable, fecha y resultado.
---   5. Revisar el cambio con el equipo antes de aplicarlo.
---
--- Comandos Git sugeridos (ejecutar en la terminal, no en SSMS):
---   git init
---   git add Actividad_3_Manual_Tecnico_Northwind.sql
---   git commit -m "Agrega diagnostico del manual tecnico Northwind"
---   git status
---   git log --oneline
---
--- Este script es de consulta. No modifica la estructura de Northwind.
-GO
